@@ -10,10 +10,10 @@ namespace Examen.CableTV.Clases
     {
 
         int CantidadTv { get; set; }
-        String Descripcion { get; }
+       public abstract String Descripcion { get; }
         List<Adicionales> ListaAdicionales { get; set; }
-        float PorsentajeCosto { get; }
-        float PorsentajeImpuesto { get; }
+        public abstract float PorsentajeCosto { get; }
+        public abstract float PorsentajeImpuesto { get; }
 
 
         public void AgregarAdicional(Adicionales adicional)
