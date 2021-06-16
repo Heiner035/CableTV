@@ -48,6 +48,7 @@
     <Compile Include="Clases\CableTica.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\CotizadoraFacade.cs" />
+    <Compile Include="Clases\Paquete.cs" />
     <Compile Include="Clases\ProveedorFactory.cs" />
     <Compile Include="Clases\Zona.cs" />
     <Compile Include="frmPrincipal.cs">

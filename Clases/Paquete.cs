@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen.CableTV.Clases
 {
-   public class Paquete
+    class Paquete
     {
-        
-        int CantidadTV { get;  set; }
-        String Descripcion { get;  }
-        List<Adicionales> ListaAdicionales { get;  set; }
-        float PorcentajeCosto { get; }
-        float PorcentajeImpuesto { get;  }
-
     }
 }
