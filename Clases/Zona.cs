@@ -29,8 +29,8 @@ namespace Examen.CableTV.Clases
                     string datosJson = sr.ReadToEnd();
 
 
-                    DataContractJsonSerializer oDataContractJsonSerializer = new DataContractJsonSerializer(typeof(List<Zona>));
-                    MemoryStream ms = new MemoryStream(System.Text.ASCIIEncoding.UTF8.GetBytes(datosJson));
+                    DataContractJsonSerializer oDataContractJsonSerializer = new DataContractJsonSerializer(typeof(List<Zona>)); //lee el Json
+                    MemoryStream ms = new MemoryStream(System.Text.ASCIIEncoding.UTF8.GetBytes(datosJson));//lee el Json
 
 
                     lista = (List<Zona>)oDataContractJsonSerializer.ReadObject(ms);
@@ -41,6 +41,10 @@ namespace Examen.CableTV.Clases
                 lista = null;
             }
             return lista;
+        }
+        public override string ToString()
+        {
+            return Nombre;
         }
 
     }
