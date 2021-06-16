@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Examen.CableTV.Clases
 {
-    class CotizadoraFacade
+    public class CotizadoraFacade
     {
+        private Cliente Cliente;
+
+        public double CalculaCosto()
+        {
+            return 0;
+        }
+
+
+
     }
 }
