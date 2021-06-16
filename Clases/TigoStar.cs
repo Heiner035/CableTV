@@ -9,25 +9,25 @@ namespace Examen.CableTV
 {
    public class TigoStar : IProveedor
     {
-        public double CostoBase => throw new NotImplementedException();
+        public double CostoBase { get; }
 
-        public string Nombre => throw new NotImplementedException();
+        public string Nombre { get; }
 
-        public Zona Zona { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Zona Zona { get; set; }
 
         public double AplicarDescuentos(Paquete paquete)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public double CostoSegunCantidad(int cantidadTV)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public double ObtenerCosto()
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }
