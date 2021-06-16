@@ -16,5 +16,10 @@ namespace Examen.CableTV.Clases
         {
 
         }
+
+        public void CreateDataName()
+        {
+            x = "Casa";
+        }
     }
 }
