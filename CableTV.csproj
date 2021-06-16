@@ -46,10 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Adicionales.cs" />
+    <Compile Include="Clases\Basico.cs" />
     <Compile Include="Clases\CableTica.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\CotizadoraFacade.cs" />
+    <Compile Include="Clases\Deportivo.cs" />
     <Compile Include="Clases\Paquete.cs" />
+    <Compile Include="Clases\Premium.cs" />
     <Compile Include="Clases\ProveedorFactory.cs" />
     <Compile Include="Clases\Zona.cs" />
     <Compile Include="frmPrincipal.cs">

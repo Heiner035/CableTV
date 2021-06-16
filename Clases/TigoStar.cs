@@ -34,7 +34,7 @@ namespace Examen.CableTV
             {
                 return 325 * cantidadTV;
             }
-            return 8;
+            
         }
 
         public double ObtenerCosto()
