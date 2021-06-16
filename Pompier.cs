@@ -8,6 +8,6 @@ namespace Examen.CableTV
 {
     class Pompier
     {
-    
+    //Pompier es un inutil
     }
 }
