@@ -9,7 +9,7 @@ namespace Examen.CableTV
 {
    public  class TeleCable : IProveedor
     {
-        public double CostoBase { get; }
+        public double CostoBase { get { return 10000; } }
 
         public string Nombre { get; }
 
