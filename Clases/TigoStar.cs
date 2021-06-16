@@ -9,7 +9,7 @@ namespace Examen.CableTV
 {
    public class TigoStar : IProveedor
     {
-        public double CostoBase { get; }
+        public double CostoBase { get { return 12000; } }
 
         public string Nombre { get; }
 

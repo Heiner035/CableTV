@@ -8,9 +8,9 @@ namespace Examen.CableTV.Clases
 {
    public class CableTica : IProveedor
     {
-        public double CostoBase { get; set; }
-
-        public string Nombre { get; set; }
+        public double CostoBase { get { return 11000; } }
+        
+        public string Nombre { get;}
 
         public Zona Zona { get; set; }
 
