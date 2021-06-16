@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Examen.CableTV
+namespace Examen.CableTV.Clases
 {
     public partial class frmPrincipal : Form
     {
@@ -20,7 +20,11 @@ namespace Examen.CableTV
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-               
+            Zona instanciaZona = new Zona();
+               foreach (Zona zona in instanciaZona.obtenerZonas() )
+            {
+                cmbZonas.Items.Add(zona);
+            }
         }       
 
         private void btnCotizar_Click(object sender, EventArgs e)

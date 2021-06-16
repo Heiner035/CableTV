@@ -1,4 +1,4 @@
-﻿namespace Examen.CableTV
+﻿namespace Examen.CableTV.Clases
 {
     partial class frmPrincipal
     {
