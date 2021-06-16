@@ -21,7 +21,18 @@ namespace Examen.CableTV.Clases
 
         public double CostoSegunCantidad(int cantidadTV)
         {
-            return 0;
+            if (cantidadTV >= 2)
+            {
+                return 400 * cantidadTV;
+            }
+            if(cantidadTV>=3 && cantidadTV <= 5)
+            {
+                return 300 * cantidadTV;
+            }
+            else
+            {
+                return 250 * cantidadTV;
+            }
         }
 
         public double ObtenerCosto()
