@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen.CableTV
+namespace Examen.CableTV.Clases
 {
    public class ProveedorFactory
     {
