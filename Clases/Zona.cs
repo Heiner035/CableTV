@@ -8,6 +8,13 @@ namespace Examen.CableTV.Clases
 {
   public class Zona
     {
+        String ruta;
+
+        String Nombre { get; set; }
+        Double PrecioDigital { get; set; }
+        Double PrecioInternet { get; set; }
+        double PrecioTV { get; set;}
+        String Proveedor { get; set; }
 
     }
 }
