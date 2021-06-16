@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CableTica.cs" />
     <Compile Include="Clases\Adicionales.cs" />
     <Compile Include="Clases\CableTica.cs" />
     <Compile Include="Clases\Cliente.cs" />
