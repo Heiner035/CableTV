@@ -17,6 +17,13 @@ namespace Examen.CableTV
 
         public double AplicarDescuentos(Paquete paquete)
         {
+            if (paquete is Deportivo)
+            {
+
+            }
+
+
+
             return 0;
         }
 
