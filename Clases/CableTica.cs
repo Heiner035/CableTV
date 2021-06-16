@@ -16,17 +16,17 @@ namespace Examen.CableTV.Clases
 
         public double AplicarDescuentos(Paquete paquete)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public double CostoSegunCantidad(int cantidadTV)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public double ObtenerCosto()
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }

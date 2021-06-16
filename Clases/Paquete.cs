@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen.CableTV.Clases
 {
-     abstract class Paquete
+     public abstract class Paquete
     {
 
         int CantidadTv { get; set; }
