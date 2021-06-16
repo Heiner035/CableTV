@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Examen.CableTV.Clases
 {
-    class Prueba
+    public class Prueba
     {
         //putos
+        String x = " Casa";
+
+
+        public Prueba()
+        {
+
+        }
     }
 }
