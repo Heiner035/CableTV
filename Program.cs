@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Examen.CableTV
+namespace Examen.CableTV.Clases
 {
     static class Program
     {
