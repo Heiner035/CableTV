@@ -18,6 +18,7 @@ namespace Examen.CableTV.Clases
 
         public void AgregarAdicional(Adicionales adicional)
         {
+            ListaAdicionales.Add(adicional);
 
         }
         public double CostoAdicionales(Zona zona)
