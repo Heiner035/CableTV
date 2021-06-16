@@ -8,11 +8,11 @@ namespace Examen.CableTV.Clases
 {
    public class CableTica : IProveedor
     {
-        public double CostoBase => throw new NotImplementedException();
+        public double CostoBase { get; set; }
 
-        public string Nombre => throw new NotImplementedException();
+        public string Nombre { get; set; }
 
-        public Zona Zona { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Zona Zona { get; set; }
 
         public double AplicarDescuentos(Paquete paquete)
         {
