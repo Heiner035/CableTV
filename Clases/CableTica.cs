@@ -10,7 +10,7 @@ namespace Examen.CableTV.Clases
     {
         public double CostoBase { get { return 11000; } }
         
-        public string Nombre { get; set; }
+        public string Nombre { get;}
 
         public Zona Zona { get; set; }
 

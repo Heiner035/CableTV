@@ -13,7 +13,7 @@ namespace Examen.CableTV
 
         public string Nombre { get; }
 
-        public Zona Zona { get; set; }
+        public Zona Zona { get; set;}
 
         public double AplicarDescuentos(Paquete paquete)
         {
