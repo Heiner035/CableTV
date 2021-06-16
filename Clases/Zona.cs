@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,19 +10,26 @@ using System.Windows.Forms;
 
 namespace Examen.CableTV.Clases
 {
-  public class Zona
+    
+ [DataContract]//Se tiene que especificar los datos utilizados en la serialización
+    public class Zona
     {
-        String ruta;
-
-        String Nombre { get; set; }
-        Double PrecioDigital { get; set; }
-        Double PrecioInternet { get; set; }
+        string ruta = Application.StartupPath + "\\Json\\Zonas.json"; //Asigna la ruta
+        [DataMember]
+        string Nombre { get; set; }
+        [DataMember]
+        double PrecioDigital { get; set; }
+        [DataMember]
+        double PrecioInternet { get; set; }
+        [DataMember]
         double PrecioTV { get; set;}
-        String Proveedor { get; set; }
+        [DataMember]
+        string Proveedor { get; set; }
+   
         public List<Zona> obtenerZonas ()
         {
             List<Zona> lista= new List<Zona>();
-            string ruta = Application.StartupPath + "\\Json\\Zonas.json"; //Asigna la ruta
+           
 
             if (File.Exists(ruta))
                 using (StreamReader sr = new StreamReader(ruta))
