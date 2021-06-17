@@ -17,6 +17,7 @@ namespace Examen.CableTV.Clases
         {
             InitializeComponent();
         }
+        private CotizadoraFacade cotizadoraFacade = new CotizadoraFacade();
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
@@ -29,8 +30,18 @@ namespace Examen.CableTV.Clases
 
         private void btnCotizar_Click(object sender, EventArgs e)
         {
-            
-        }     
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo xml|*.xml";
+            var resultado = saveFileDialog.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                cotizadoraFacade.ExportarXml(saveFileDialog.FileName);
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione la ruta");
+            }
+        }
 
         private void rbtTeleCable_CheckedChanged(object sender, EventArgs e)
         {

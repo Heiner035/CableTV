@@ -47,15 +47,15 @@ namespace Examen.CableTV.Clases
             xZona.InnerText = "aaa";
             xProveedor.AppendChild(xZona);
             XmlElement XAdicionales = xmlDoc.CreateElement("Adicionales");
-            if (!= 0)
-            {
-                for ()
-                {
-                    XmlElement xAdicional = xmlDoc.CreateElement("Adicional");
-                    xAdicional.InnerText = "aaa";
-                    XAdicionales.AppendChild(xAdicional);
-                }
-            }
+            //if (!= 0)
+            //{
+            //    for ()
+            //    {
+            //        XmlElement xAdicional = xmlDoc.CreateElement("Adicional");
+            //        xAdicional.InnerText = "aaa";
+            //        XAdicionales.AppendChild(xAdicional);
+            //    }
+            //}
             XmlElement xTotal = xmlDoc.CreateElement("Total");
             xTotal.SetAttribute("Descuentos", "aaa");
             xTotal.InnerText = "aa";
