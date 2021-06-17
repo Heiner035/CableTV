@@ -40,7 +40,10 @@ namespace Examen.CableTV.Clases
             {
                 MessageBox.Show("Por favor seleccione la ruta");
             }
+            webBrowser.Url = new Uri(Application.StartupPath + "\\html\\Cotizacion.html");
         }
+
+       
 
         private void rbtTeleCable_CheckedChanged(object sender, EventArgs e)
         {
