@@ -30,13 +30,14 @@ namespace Examen.CableTV.Clases
         private void btnCotizar_Click(object sender, EventArgs e)
         {
             Validacion();
+            cotizadoraFacade.agregarCliente(dtpFechaNace.Value, mtxId.Text, txtNombre.Text, (Paquete)lstPaquetes.SelectedItem, cotizadoraFacade.crearProveedor(rbtCableTica.Checked, rbtTigoStar.Checked, rbtCableTica.Checked, (Zona)cmbZonas.SelectedItem));
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivo xml|*.xml";
             var resultado = saveFileDialog.ShowDialog();
             if (resultado == DialogResult.OK)
             {
                 MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
-                cotizadoraFacade.agregarCliente(dtpFechaNace.Value, mtxId.Text, txtNombre.Text,(Paquete)lstPaquetes.SelectedItem,cotizadoraFacade.crearProveedor(rbtCableTica.Checked,rbtTigoStar.Checked,rbtCableTica.Checked,(Zona)cmbZonas.SelectedItem));
+             
                 if (chkDigital.Checked)
                 {
                     cotizadoraFacade.agregarAdicionales(Adicionales.Digital);
