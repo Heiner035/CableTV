@@ -13,7 +13,7 @@ namespace Examen.CableTV.Clases
     public class CotizadoraFacade
     {
         private Cliente cliente = null;
-        private Paquete paquete = null;
+   
         public double CalculaCosto()
         {
             return 0;
@@ -36,29 +36,29 @@ namespace Examen.CableTV.Clases
             XmlElement xProveedor = xmlDoc.CreateElement("Proveedor");
             xProveedor.SetAttribute("Nombre", cliente.IProvedor.Nombre);
             XmlElement xPaquete = xmlDoc.CreateElement("Paquete");
-            xPaquete.SetAttribute("Descripcion", "aa");
+            xPaquete.SetAttribute("Descripcion", cliente.Paquete.Descripcion);
             xProveedor.AppendChild(xPaquete);
             XmlElement xCliente = xmlDoc.CreateElement("Cliente");
             xCliente.SetAttribute("Identificacion", cliente.Identificacion);
             xCliente.SetAttribute("Nombre", cliente.Nombre);
             xCliente.SetAttribute("FechaNacimiento", cliente.FechaNacimiento.ToString("MM/dd/yyyy"));
-            xCliente.SetAttribute("CantidadTV","");
+            xCliente.SetAttribute("CantidadTV", cliente.Paquete.CantidadTv + "");
             xProveedor.AppendChild(xCliente);
             XmlElement xZona = xmlDoc.CreateElement("Zona");
-            xZona.SetAttribute("PrecioTV", "aaa");
-            xZona.InnerText = "aaa";
+            xZona.SetAttribute("PrecioTV", cliente.IProvedor.Zona.PrecioTV + "");
+            xZona.InnerText = cliente.IProvedor.Zona.Nombre;
             xProveedor.AppendChild(xZona);
             XmlElement XAdicionales = xmlDoc.CreateElement("Adicionales");
-      
-            //if (!= 0)
-            //{
-            //    for ()
-            //    {
-            //        XmlElement xAdicional = xmlDoc.CreateElement("Adicional");
-            //        xAdicional.InnerText = "aaa";
-            //        XAdicionales.AppendChild(xAdicional);
-            //    }
-            //}
+
+            if (cliente.Paquete.ListaAdicionales.Count  != 0)
+            {
+                foreach (Adicionales adicional in cliente.Paquete.ListaAdicionales)
+                {
+                    XmlElement xAdicional = xmlDoc.CreateElement("Adicional");
+                    xAdicional.InnerText = adicional + "";
+                    XAdicionales.AppendChild(xAdicional);
+                }
+            }
             XmlElement xTotal = xmlDoc.CreateElement("Total");
             xTotal.SetAttribute("Descuentos", "aaa");
             xTotal.InnerText = "aa";
