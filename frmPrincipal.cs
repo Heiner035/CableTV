@@ -35,7 +35,7 @@ namespace Examen.CableTV.Clases
             var resultado = saveFileDialog.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                cotizadoraFacade.ExportarXml(saveFileDialog.FileName);
+                MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
             }
             else
             {

@@ -61,7 +61,7 @@ namespace Examen.CableTV.Clases
             xTotal.InnerText = "aa";
             xProveedor.AppendChild(xTotal);
 
-            return "aaa";
+            return "Cotización realizada con exito";
         }
 
     }
