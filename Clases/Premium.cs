@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen.CableTV.Clases
 {
-    class Premium : Paquete
+    public class Premium : Paquete
     {
         public override string Descripcion { get { return "Premium"; } }
 

@@ -16,6 +16,13 @@ namespace Examen.CableTV.Clases
         public abstract float PorsentajeImpuesto { get; }
 
 
+        public void crear()
+        {
+            this.ListaAdicionales = new List<Adicionales>();
+        }
+
+
+
         public void AgregarAdicional(Adicionales adicional)
         {
             ListaAdicionales.Add(adicional);
