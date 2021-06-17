@@ -36,8 +36,6 @@ namespace Examen.CableTV.Clases
             var resultado = saveFileDialog.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
-             
                 if (chkDigital.Checked)
                 {
                     cotizadoraFacade.agregarAdicionales(Adicionales.Digital);
@@ -50,6 +48,9 @@ namespace Examen.CableTV.Clases
                 {
                     cotizadoraFacade.agregarAdicionales(Adicionales.Telefono);
                 }
+                MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
+             
+              
 
             }
             else
