@@ -36,6 +36,20 @@ namespace Examen.CableTV.Clases
             if (resultado == DialogResult.OK)
             {
                 MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
+                cotizadoraFacade.agregarCliente(dtpFechaNace.Value, mtxId.Text, txtNombre.Text,(Paquete)lstPaquetes.SelectedItem,cotizadoraFacade.crearProveedor(rbtCableTica.Checked,rbtTigoStar.Checked,rbtCableTica.Checked,(Zona)cmbZonas.SelectedItem));
+                if (chkDigital.Checked)
+                {
+                    cotizadoraFacade.agregarAdicionales(Adicionales.Digital);
+                }
+                if (chkInternet.Checked)
+                {
+                    cotizadoraFacade.agregarAdicionales(Adicionales.Internet);
+                }
+                if (chkTelefono.Checked)
+                {
+                    cotizadoraFacade.agregarAdicionales(Adicionales.Telefono);
+                }
+
             }
             else
             {

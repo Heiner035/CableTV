@@ -13,7 +13,7 @@ namespace Examen.CableTV.Clases
     public class CotizadoraFacade
     {
         private Cliente cliente = null;
-   
+
         public double CalculaCosto()
         {
             return 0;
@@ -27,6 +27,18 @@ namespace Examen.CableTV.Clases
             cliente.Nombre = nombre;
             cliente.Paquete = paquete;
             cliente.IProvedor = proveedor;
+        }
+
+        public void agregarAdicionales (Adicionales adicional)
+        {
+            cliente.Paquete.AgregarAdicional(adicional);
+
+        }
+
+        public IProveedor crearProveedor(bool teleCable, bool tigoStar, bool cableTica, Zona zona)
+        {
+           return ProveedorFactory.Instancia.factoryProveedor(teleCable, tigoStar, cableTica, zona);
+
         }
 
         public string ExportarXml(string Ruta)

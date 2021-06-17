@@ -22,7 +22,7 @@ namespace Examen.CableTV.Clases
             }
         }
 
-        public IProveedor factoryProveedor (bool telecable, bool cabletica, bool tigoStar)
+        public IProveedor factoryProveedor (bool telecable, bool cabletica, bool tigoStar, Zona zona)
         {
             IProveedor provedor = null;
             if (telecable == true)
@@ -37,6 +37,7 @@ namespace Examen.CableTV.Clases
             {
                 provedor = new TigoStar();
             }
+            provedor.Zona = zona;
             return provedor;
         }
 
