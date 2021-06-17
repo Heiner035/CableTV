@@ -23,12 +23,39 @@ namespace Examen.CableTV.Clases
         }
         public double CostoAdicionales(Zona zona)
         {
-            if (zona.Nombre.Equals(""))
+            double costos=0;
+            switch (zona.Nombre)
             {
-                
+                case "Brunca":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Central":
+                    costos= zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Huetar":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "GAM":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Zona Sur":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Zona Norte":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Valle Central":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Atlántico":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
+                case "Pacífico":
+                    costos = zona.PrecioDigital + zona.PrecioInternet + zona.PrecioTelefono;
+                    break;
             }
-         
-            return 0;
+
+            return costos;
         }
 
         public bool TieneAdicional(Adicionales adicional)

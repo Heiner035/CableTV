@@ -22,6 +22,7 @@ namespace Examen.CableTV.Clases
         [DataMember]
         public double PrecioInternet { get; set; }
         [DataMember]
+        public double PrecioTelefono { get; set; }
         public double PrecioTV { get; set;}
         [DataMember]
         public string Proveedor { get; set; }
