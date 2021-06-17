@@ -31,24 +31,31 @@ namespace Examen.CableTV
             return descuento;
         }
 
+        double cant = 0;
         public double CostoSegunCantidad(int cantidadTV)
         {
             if (cantidadTV >= 3)
             {
+                cant = 500 * cantidadTV;
                 return 500 * cantidadTV;
             }
             if (cantidadTV >= 4 && cantidadTV <= 5)
             {
+                cant = 450 * cantidadTV;
                 return 450 * cantidadTV;
             }
             else
             {
+                cant = 400 * cantidadTV;
                 return 400 * cantidadTV;
             }
         }
 
         public double ObtenerCosto()
         {
+
+            double costoCant = cant;
+            double costo = AplicarDescuentos();
             return 0;
         }
     }
