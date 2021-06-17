@@ -35,7 +35,7 @@ namespace Examen.CableTV.Clases
             var resultado = saveFileDialog.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                cotizadoraFacade.ExportarXml(saveFileDialog.FileName);
+                MessageBox.Show(cotizadoraFacade.ExportarXml(saveFileDialog.FileName));
             }
             else
             {
@@ -58,7 +58,35 @@ namespace Examen.CableTV.Clases
             
         }
 
-        
+        private void Validacion()
+        {
+            if (txtNombre.Text==String.Empty)
+            {
+                MessageBox.Show("Debe digitar una identificación");
+                return;
+            }
+
+
+            if (txtNombre.Text==String.Empty)
+            {
+                MessageBox.Show("Debe digitar un nombre");
+                return;
+            }
+
+            if (nudCantidadTV.Value<1)
+            {
+                MessageBox.Show("La cantidad debe ser mayor a 0");
+                return;
+            }
+
+            if (cmbZonas.SelectedIndex<0)
+            {
+                MessageBox.Show("Debe seleccionar una zona");
+                return;
+            }
+
+
+        }
 
 
     }
