@@ -34,10 +34,10 @@ namespace Examen.CableTV
             if (paquete is Premium)//si es premium
             {
 
-                //  costoDigital = precio guardado en zona - (precio en zona * 0.75);
+                  costoDigital = this.Zona.PrecioDigital - (this.Zona.PrecioDigital * 0.75);
                 if (paquete.TieneAdicional(Adicionales.Internet))
                 {
-                    //costoInternet = precio guardado en zona - (precio en zona *0.25);
+                    costoInternet = this.Zona.PrecioInternet - (this.Zona.PrecioInternet * 0.25);
                 }
                
             }
