@@ -69,6 +69,9 @@ namespace Examen.CableTV
 
         public double ObtenerCosto()
         {
+
+            double x = this.CostoBase + this.Zona.PrecioTV;
+            
             return 0;
         }
     }
