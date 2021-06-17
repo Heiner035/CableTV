@@ -91,6 +91,7 @@ namespace Examen.CableTV.Clases
                     XAdicionales.AppendChild(xAdicional);
                 }
             }
+            xProveedor.AppendChild(XAdicionales);
             XmlElement xTotal = xmlDoc.CreateElement("Total");
             xTotal.SetAttribute("Descuentos", ""+cliente.IProvedor.AplicarDescuentos(cliente.Paquete));
             xTotal.InnerText = ""+ this.CalculaCosto();
