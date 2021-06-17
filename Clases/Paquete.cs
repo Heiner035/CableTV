@@ -9,9 +9,9 @@ namespace Examen.CableTV.Clases
      public abstract class Paquete
     {
 
-        int CantidadTv { get; set; }
+       public int CantidadTv { get; set; }
        public abstract String Descripcion { get; }
-        List<Adicionales> ListaAdicionales { get; set; }
+       public List<Adicionales> ListaAdicionales { get; set; }
         public abstract float PorsentajeCosto { get; }
         public abstract float PorsentajeImpuesto { get; }
 
