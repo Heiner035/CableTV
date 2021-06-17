@@ -21,11 +21,11 @@ namespace Examen.CableTV.Clases
             double adicionales = cliente.Paquete.CostoAdicionales(cliente.IProvedor.Zona);//23000
             double televisores = cliente.IProvedor.CostoSegunCantidad(cliente.Paquete.CantidadTv);//1800
             double paquetesPremium = (total + adicionales + televisores) * cliente.Paquete.PorsentajeCosto + (total + adicionales + televisores) * cliente.Paquete.PorsentajeImpuesto;
-            double descuento = this.
+            double descuento = this.cliente.IProvedor.AplicarDescuentos(cliente.Paquete);
+            
 
-            //double descuentos = cliente.IProvedor.AplicarDescuentos(cliente.Paquete);
-
-            return 0;
+            
+            return total + adicionales + televisores + paquetesPremium - descuento;
         }
 
         public void agregarCliente (DateTime fecha, string identficacion, string nombre, Paquete paquete, IProveedor proveedor)
@@ -91,8 +91,8 @@ namespace Examen.CableTV.Clases
                 }
             }
             XmlElement xTotal = xmlDoc.CreateElement("Total");
-            xTotal.SetAttribute("Descuentos", "aaa");
-            xTotal.InnerText = "aa";
+            xTotal.SetAttribute("Descuentos", ""+cliente.IProvedor.AplicarDescuentos(cliente.Paquete));
+            xTotal.InnerText = ""+ this.CalculaCosto();
             xProveedor.AppendChild(xTotal);
             xmlDoc.DocumentElement.AppendChild(xProveedor);
             xmlDoc.Save(Ruta);
