@@ -16,7 +16,12 @@ namespace Examen.CableTV.Clases
 
         public double AplicarDescuentos(Paquete paquete)
         {
-            
+            double descuentos = 0;
+            bool tieneDigital = paquete.TieneAdicional(Adicionales.Digital);
+            if (tieneDigital)
+            {
+                descuentos = (descuentos + CostoBase * 0.55);
+            }
 
 
 
