@@ -47,6 +47,7 @@ namespace Examen.CableTV.Clases
             xZona.InnerText = "aaa";
             xProveedor.AppendChild(xZona);
             XmlElement XAdicionales = xmlDoc.CreateElement("Adicionales");
+      
             //if (!= 0)
             //{
             //    for ()
@@ -60,6 +61,8 @@ namespace Examen.CableTV.Clases
             xTotal.SetAttribute("Descuentos", "aaa");
             xTotal.InnerText = "aa";
             xProveedor.AppendChild(xTotal);
+            xmlDoc.DocumentElement.AppendChild(xProveedor);
+            xmlDoc.Save(Ruta);
 
             return "Cotización realizada con exito";
         }
