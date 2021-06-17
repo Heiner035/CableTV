@@ -43,7 +43,7 @@ namespace Examen.CableTV.Clases
             }
             webBrowser.Url = new Uri(Application.StartupPath + "\\html\\Cotizacion.html");
             }
-        }
+        
 
        
 
