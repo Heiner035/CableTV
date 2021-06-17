@@ -39,7 +39,7 @@ namespace Examen.CableTV
                 {
                     //costoInternet = precio guardado en zona - (precio en zona *0.25);
                 }
-
+               
             }
 
             double descuentoTotal = costoInternet + costoTelefono + costoDigital;
