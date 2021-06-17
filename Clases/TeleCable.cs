@@ -55,7 +55,7 @@ namespace Examen.CableTV
         {
 
             double costoCant = cant;
-            double costo = AplicarDescuentos();
+            
             return 0;
         }
     }
