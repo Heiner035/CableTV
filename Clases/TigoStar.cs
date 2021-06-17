@@ -26,12 +26,12 @@ namespace Examen.CableTV
             double costoInternet = 0;
           
             
-            if (tieneDigital)
+            if (tieneDigital) // si hay digital
             {
                 costoBase = costoBase - (costoBase * 0.55);
                 
             }
-            if (paquete is Premium)
+            if (paquete is Premium)//si es premium
             {
 
                 //  costoDigital = precio guardado en zona - (precio en zona * 0.75);
