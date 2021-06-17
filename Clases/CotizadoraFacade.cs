@@ -19,6 +19,16 @@ namespace Examen.CableTV.Clases
             return 0;
         }
 
+        public void agregarCliente (DateTime fecha, string identficacion, string nombre, Paquete paquete, IProveedor proveedor)
+        {
+            cliente = new Cliente();
+            cliente.FechaNacimiento = fecha;
+            cliente.Identificacion = identficacion;
+            cliente.Nombre = nombre;
+            cliente.Paquete = paquete;
+            cliente.IProvedor = proveedor;
+        }
+
         public string ExportarXml(string Ruta)
         {
             System.Xml.XmlDocument xmlDoc = new XmlDocument();//crea la variable
