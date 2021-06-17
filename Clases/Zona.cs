@@ -16,15 +16,15 @@ namespace Examen.CableTV.Clases
     {
         string ruta = Application.StartupPath + "\\Json\\Zonas.json"; //Asigna la ruta
         [DataMember]
-        string Nombre { get; set; }
+        public string Nombre { get; set; }
         [DataMember]
-        double PrecioDigital { get; set; }
+        public double PrecioDigital { get; set; }
         [DataMember]
-        double PrecioInternet { get; set; }
+        public double PrecioInternet { get; set; }
         [DataMember]
-        double PrecioTV { get; set;}
+        public double PrecioTV { get; set;}
         [DataMember]
-        string Proveedor { get; set; }
+        public string Proveedor { get; set; }
    
         public List<Zona> obtenerZonas ()
         {

@@ -23,7 +23,10 @@ namespace Examen.CableTV.Clases
         }
         public double CostoAdicionales(Zona zona)
         {
-           
+            if (zona.Nombre.Equals(""))
+            {
+                
+            }
          
             return 0;
         }
