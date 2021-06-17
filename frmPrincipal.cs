@@ -21,12 +21,11 @@ namespace Examen.CableTV.Clases
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            Zona instanciaZona = new Zona();
-               foreach (Zona zona in instanciaZona.obtenerZonas() )
-            {
-                cmbZonas.Items.Add(zona);
-            }
-        }       
+            lstPaquetes.Items.Add(new Basico());
+            lstPaquetes.Items.Add(new Premium());
+            lstPaquetes.Items.Add(new Deportivo());
+        }
+         
 
         private void btnCotizar_Click(object sender, EventArgs e)
         {
@@ -45,18 +44,33 @@ namespace Examen.CableTV.Clases
 
         private void rbtTeleCable_CheckedChanged(object sender, EventArgs e)
         {
-            
-        }
+                Zona instanciaZona = new Zona();
+                foreach (Zona zona in instanciaZona.obtenerZonas())
+                {
+                    cmbZonas.Items.Add(zona);
+                }
+            }
+        
 
         private void rbtCableTica_CheckedChanged(object sender, EventArgs e)
         {
-            
+            Zona instanciaZona = new Zona();
+            foreach (Zona zona in instanciaZona.obtenerZonas())
+            {
+                cmbZonas.Items.Add(zona);
+            }
         }
+    
 
         private void rbtTigoStar_CheckedChanged(object sender, EventArgs e)
         {
-            
+        Zona instanciaZona = new Zona();
+        foreach (Zona zona in instanciaZona.obtenerZonas())
+        {
+            cmbZonas.Items.Add(zona);
         }
+    }
+
 
         private void Validacion()
         {

@@ -9,11 +9,11 @@ namespace Examen.CableTV.Clases
     public class Cliente
     {
 
-        DateTime FechaNacimiento { get; set; }
-        String Identificacion { get; set; }
-        String Nombre { get; set; }
-        Paquete Paquete{get;set;}
-        IProveedor IProvedor { get;  set; }
+       public DateTime FechaNacimiento { get; set; }
+       public string Identificacion { get; set; }
+        public string Nombre { get; set; }
+       public  Paquete Paquete{get;set;}
+        public IProveedor IProvedor { get;  set; }
 
     }
 }
