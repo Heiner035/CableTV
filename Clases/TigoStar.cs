@@ -17,10 +17,28 @@ namespace Examen.CableTV
 
         public double AplicarDescuentos(Paquete paquete)
         {
-            if (paquete is Deportivo)
+            bool tieneDigital = paquete.TieneAdicional(Adicionales.Digital);
+            bool tieneInternet = paquete.TieneAdicional(Adicionales.Internet);
+            bool tieneTelefono = paquete.TieneAdicional(Adicionales.Telefono);
+            double costoBase = this.CostoBase;
+            double costoTelefono = 0;
+            double costoDigital = 0;
+            double costoInternet = 0;
+          
+            
+            if (tieneDigital)
             {
-
+                costoBase = costoBase - (costoBase * 0.55);
+                paquete.
             }
+            if (paquete is Premium)
+            {
+                costoBase = costoBase - (costoBase * 0.75);
+                costoDigital = Zona.;
+            }
+            
+
+            
 
 
 
