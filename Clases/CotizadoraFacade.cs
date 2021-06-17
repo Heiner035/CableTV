@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Xsl;
 
 namespace Examen.CableTV.Clases
 {
@@ -63,6 +65,15 @@ namespace Examen.CableTV.Clases
             xProveedor.AppendChild(xTotal);
             xmlDoc.DocumentElement.AppendChild(xProveedor);
             xmlDoc.Save(Ruta);
+
+
+            //string rutaXslt = Application.StartupPath + "\\Xslt\\Libros.xslt";//Da la ruta donde se va a almacenar el xslt
+            //// Transformación del XMl utilizando XSLT
+            XslCompiledTransform myXslTrans = new XslCompiledTransform(); //crea la variable xslt
+            // Carga en memoria la lectura xslt
+            myXslTrans.Load(Ruta); //carga el documento
+            // Transforma el archivo xml aun archivo HTML
+            myXslTrans.Transform(Ruta, Application.StartupPath + "\\html\\Cotizacion.html");// se indica donde se va a guardar el html
 
             return "Cotización realizada con exito";
         }
