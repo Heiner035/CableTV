@@ -16,6 +16,15 @@ namespace Examen.CableTV.Clases
 
         public double CalculaCosto()
         {
+
+            double total = cliente.IProvedor.ObtenerCosto(); // 14000
+            double adicionales = cliente.Paquete.CostoAdicionales(cliente.IProvedor.Zona);//23000
+            double televisores = cliente.IProvedor.CostoSegunCantidad(cliente.Paquete.CantidadTv);//1800
+            double paquetesPremium = (total + adicionales + televisores) * cliente.Paquete.PorsentajeCosto + (total + adicionales + televisores) * cliente.Paquete.PorsentajeImpuesto;
+            double descuento = this.
+
+            //double descuentos = cliente.IProvedor.AplicarDescuentos(cliente.Paquete);
+
             return 0;
         }
 

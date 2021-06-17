@@ -21,32 +21,31 @@ namespace Examen.CableTV
             bool tieneDigital = paquete.TieneAdicional(Adicionales.Digital);
             if (paquete is Premium)
             {
-                int cant = 0;
-               descuento+= this.CostoSegunCantidad(cant);
+               descuento = this.CostoSegunCantidad(paquete.CantidadTv);
             }
             if (tieneDigital)
             {
-                descuento =+ this.CostoBase * 0.5;
+                descuento =+ this.CostoBase * 0.50;
             }
             return descuento;
         }
 
-        double cant = 0;
+       
         public double CostoSegunCantidad(int cantidadTV)
         {
             if (cantidadTV >= 3)
             {
-                cant = 500 * cantidadTV;
+                
                 return 500 * cantidadTV;
             }
             if (cantidadTV >= 4 && cantidadTV <= 5)
             {
-                cant = 450 * cantidadTV;
+              
                 return 450 * cantidadTV;
             }
             else
             {
-                cant = 400 * cantidadTV;
+                
                 return 400 * cantidadTV;
             }
         }
@@ -54,9 +53,10 @@ namespace Examen.CableTV
         public double ObtenerCosto()
         {
 
-            double costoCant = cant;
+            double total = this.CostoBase + this.Zona.PrecioTV;
             
-            return 0;
+
+            return total;
         }
     }
 }
