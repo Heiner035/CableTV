@@ -17,18 +17,18 @@ namespace Examen.CableTV
 
         public double AplicarDescuentos(Paquete paquete)
         {
-
+            double descuento = 0;
             bool tieneDigital = paquete.TieneAdicional(Adicionales.Digital);
             if (paquete is Premium)
             {
                 int cant = 0;
-               return this.CostoSegunCantidad(cant);
+               descuento+= this.CostoSegunCantidad(cant);
             }
             if (tieneDigital)
             {
-                return this.CostoBase * 0.5;
+                descuento =+ this.CostoBase * 0.5;
             }
-            return 0;
+            return descuento;
         }
 
         public double CostoSegunCantidad(int cantidadTV)
