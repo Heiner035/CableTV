@@ -20,13 +20,13 @@ namespace Examen.CableTV.Clases
             bool tieneDigital = paquete.TieneAdicional(Adicionales.Digital);
             if (tieneDigital)
             {
-                descuentos = (descuentos + CostoBase * 0.55);
+                descuentos = descuentos +(CostoBase * 0.55);
             }
-
-
-
-
-            return 0;
+            if(paquete is Premium)
+            {
+                descuentos = descuentos + (Zona.PrecioDigital * 0.75) + (Zona.PrecioInternet * 0.25);
+            }
+            return descuentos;
         }
 
         public double CostoSegunCantidad(int cantidadTV)
