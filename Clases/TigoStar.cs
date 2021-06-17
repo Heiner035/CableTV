@@ -29,20 +29,25 @@ namespace Examen.CableTV
             if (tieneDigital)
             {
                 costoBase = costoBase - (costoBase * 0.55);
-                paquete.
+                
             }
             if (paquete is Premium)
             {
-                costoBase = costoBase - (costoBase * 0.75);
-                costoDigital = Zona.;
+
+                //  costoDigital = precio guardado en zona - (precio en zona * 0.75);
+                if (paquete.TieneAdicional(Adicionales.Internet))
+                {
+                    //costoInternet = precio guardado en zona - (precio en zona *0.25);
+                }
+
             }
+
+            double descuentoTotal = costoInternet + costoTelefono + costoDigital;
             
 
-            
 
 
-
-            return 0;
+            return descuentoTotal;
         }
 
         public double CostoSegunCantidad(int cantidadTV)
