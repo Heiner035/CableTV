@@ -29,6 +29,7 @@ namespace Examen.CableTV.Clases
 
         private void btnCotizar_Click(object sender, EventArgs e)
         {
+            Validacion();
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivo xml|*.xml";
             var resultado = saveFileDialog.ShowDialog();
@@ -41,6 +42,7 @@ namespace Examen.CableTV.Clases
                 MessageBox.Show("Por favor seleccione la ruta");
             }
             webBrowser.Url = new Uri(Application.StartupPath + "\\html\\Cotizacion.html");
+            }
         }
 
        
