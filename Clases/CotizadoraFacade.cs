@@ -10,8 +10,8 @@ namespace Examen.CableTV.Clases
 {
     public class CotizadoraFacade
     {
-        private Cliente Cliente;
-
+        private Cliente cliente = null;
+        private Paquete paquete = null;
         public double CalculaCosto()
         {
             return 0;
@@ -32,15 +32,15 @@ namespace Examen.CableTV.Clases
                 xmlDoc.Load(Ruta);
             }
             XmlElement xProveedor = xmlDoc.CreateElement("Proveedor");
-            xProveedor.SetAttribute("Nombre", "aaa");
+            xProveedor.SetAttribute("Nombre", cliente.IProvedor.Nombre);
             XmlElement xPaquete = xmlDoc.CreateElement("Paquete");
             xPaquete.SetAttribute("Descripcion", "aa");
             xProveedor.AppendChild(xPaquete);
             XmlElement xCliente = xmlDoc.CreateElement("Cliente");
-            xCliente.SetAttribute("Identificacion", "aa");
-            xCliente.SetAttribute("Nombre", "aa");
-            xCliente.SetAttribute("FechaNacimiento", "aa");
-            xCliente.SetAttribute("CantidadTV", "aa");
+            xCliente.SetAttribute("Identificacion", cliente.Identificacion);
+            xCliente.SetAttribute("Nombre", cliente.Nombre);
+            xCliente.SetAttribute("FechaNacimiento", cliente.FechaNacimiento.ToString("MM/dd/yyyy"));
+            xCliente.SetAttribute("CantidadTV","");
             xProveedor.AppendChild(xCliente);
             XmlElement xZona = xmlDoc.CreateElement("Zona");
             xZona.SetAttribute("PrecioTV", "aaa");

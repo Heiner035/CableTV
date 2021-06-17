@@ -61,6 +61,18 @@ namespace Examen.CableTV.Clases
         public bool TieneAdicional(Adicionales adicional)
         {
             bool tiene = false;
+
+            foreach (var item in this.ListaAdicionales)
+            {
+                if (item ==adicional )
+                {
+                    tiene = true;
+                    break;
+                }
+                
+
+            }
+
             return tiene;
         }
 
