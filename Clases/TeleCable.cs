@@ -17,6 +17,11 @@ namespace Examen.CableTV
 
         public double AplicarDescuentos(Paquete paquete)
         {
+            if(paquete is Premium)
+            {
+                int cant = 0;
+               return this.CostoSegunCantidad(cant);
+            }
             return 0;
         }
 
